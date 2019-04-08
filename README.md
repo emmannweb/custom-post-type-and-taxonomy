@@ -21,6 +21,32 @@ where you see.. 'rewrite' => array('slug'=>... ) is what you gonna see in both c
 
 Finally, we used a hook "init" to initialize our custom post type.
 
+### Display your custom post type in the frond-end
+
+you will to query where you want to show your custom post type like so:
+
+       <?php 
+       
+       // create an instance of WP_Query.
+         $mycustomPostype = new WP_Query(array(
+          'post-type'=> 'musics',
+          'posts_per_page'=>3
+         ));
+         
+         // basic usage
+          if (have_posts()){
+          
+             while ($mycustomPostype->have_posts()){
+             $mycustomPostype->the_post();
+          }
+          
+          } 
+          
+          wp_reset_postdata();
+
+      ?>
+      
+
 ### Flexibility
 
 To use it, you just need to copy the entire code in your wordpress functions.php file or you can use it as a plugin also.
