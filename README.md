@@ -23,7 +23,7 @@ Finally, we used a hook "init" to initialize our custom post type.
 
 ### Display your custom post type in the frond-end
 
-you will to query where you want to show your custom post type like so:
+you will need to query where you want to show your custom post type like so:
 
        <?php 
        
